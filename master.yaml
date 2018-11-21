@@ -14,7 +14,7 @@ broad_bundle_hg19:
           - md5 *.gz > postdownload-checksums.md5
           - gunzip *.gz
           - md5 * > final-checksums.md5
-trimmometic-0.38:
+trimmometic_0_38:
   metadata:
     name: trimmometic-0.38
     species: human
