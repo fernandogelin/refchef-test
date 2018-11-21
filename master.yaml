@@ -1,45 +1,31 @@
-reference_test1:
+broad_bundle_hg19:
   metadata:
-    name: reference_test1
-    species: mouse
-    organization: ucsc
-    downloader: aleith
-  levels:
-    references:
-    - component: primary
-      retrieve: true
-      commands:
-      - curl https://s3.us-east-2.amazonaws.com/refchef-tests/chr1.fa.gz
-      - md5 *.fa.gz > postdownload_checksums.md5
-      - gunzip *.gz
-      - md5 *.fa > final_checksums.md5
-reference_test2:
-  metadata:
-    name: reference_test2
+    name: broad_bundle_hg19
     species: human
-    organization: ucsc
+    organization: broad institute
     downloader: fgelin
   levels:
     references:
-    - component: primary
-      retrieve: true
-      commands:
-      - curl https://s3.us-east-2.amazonaws.com/refchef-tests/chr1.fa.gz
-      - md5 *.fa.gz > postdownload_checksums.md5
-      - gunzip *.gz
-      - md5 *.fa > final_checksums.md5
-reference_test3:
+      - component: primary
+        retrieve: true
+        commands:
+          - wget --user='gsapubftp-anonymous' 'ftp://ftp.broadinstitute.org/bundle/hg19/*'
+          - ls -a1 .*.done | xargs rm
+          - md5 *.gz > postdownload-checksums.md5
+          - gunzip *.gz
+          - md5 * > final-checksums.md5
+trimmometic-0.38:
   metadata:
-    name: reference_test3
+    name: trimmometic-0.38
     species: human
-    organization: ucsc
+    organization: usadellab.org
     downloader: fgelin
   levels:
     references:
-    - component: primary
-      retrieve: true
-      commands:
-      - curl https://s3.us-east-2.amazonaws.com/refchef-tests/chr1.fa.gz
-      - md5 *.fa.gz > postdownload_checksums.md5
-      - gunzip *.gz
-      - md5 *.fa > final_checksums.md5
+      - component: adapters
+        retrieve: true
+        commands:
+          - wget http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/Trimmomatic-Src-0.38.zip
+          - unzip Trimmomatic-Src-0.38.zip
+          - mv trimmomatic-0.38/adapters/* .
+          - rm -rf trimmomatic-0.38
