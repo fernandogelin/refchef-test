@@ -18,7 +18,7 @@ trimmometic_0_38:
   metadata:
     name: trimmometic-0.38
     species: human
-    organization: usadellab.org
+    organization: test
     downloader: fgelin
   levels:
     references:
