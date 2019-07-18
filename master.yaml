@@ -17,7 +17,7 @@ reference_test1:
     - component: primary
       complete:
         status: true
-        time: 2019-07-18 13:40:25.200727
+        time: 2019-07-18 13:40:57.095007
       commands:
       - wget -nv https://s3.us-east-2.amazonaws.com/refchef-tests/chr1.fa.gz
       - md5 *.fa.gz > postdownload_checksums.md5

@@ -1,0 +1,27 @@
+2019-07-18 13:40:52,196 INFO: 
+        ===========================================
+        REFCHEF 🐶
+        -------------------------------------------
+        - References will be downloaded to: tests/data
+        - Remote repository for master.yaml fernandogelin/refchef-test
+        - Local repository for master.yaml tests/refchef-test
+        - Logs files: tests/refchef-test/logs/
+        -------------------------------------------
+        
+2019-07-18 13:40:52,196 INFO: 
+        -------------------------------------------
+        The folowing references will be downloaded:
+            - reference_test1
+        ===========================================
+            
+2019-07-18 13:40:52,199 INFO:  🐶 RefChef... getting reference: reference_test1, component: primary
+2019-07-18 13:40:52,199 INFO: Running command "wget -nv https://s3.us-east-2.amazonaws.com/refchef-tests/chr1.fa.gz"
+2019-07-18 13:40:53,954 INFO: Running command "md5 *.fa.gz > postdownload_checksums.md5"
+2019-07-18 13:40:54,103 INFO: Running command "gunzip *.gz"
+2019-07-18 13:40:56,665 INFO: Running command "md5 *.fa > final_checksums.md5"
+2019-07-18 13:40:57,099 INFO: References processed: ['reference_test1']
+2019-07-18 13:40:57,099 INFO: Location of references: tests/data
+2019-07-18 13:40:57,181 INFO: 
+Empty DataFrame
+Columns: [type, name, component, organization, uuid]
+Index: []
